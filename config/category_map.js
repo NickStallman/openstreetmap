@@ -45,8 +45,8 @@ var mapping = {
     'theatre':                  ['education','entertainment'],
     'college':                  ['education'],
     'kindergarten':             ['education'],
-    'school':                   ['education'],
-    'university':               ['education'],
+    'school':                   ['education','education:school'],
+    'university':               ['education','education:university'],
 
     'bar':                      ['nightlife'],
     'biergarten':               ['nightlife','food'],
@@ -92,8 +92,8 @@ var mapping = {
 
     'car_rental':               ['transport','professional'],
     'car_wash':                 ['professional'],
-    'charging_station':         ['transport','professional'],
-    'fuel':                     ['transport','professional'],
+    'charging_station':         ['transport','transport:fuel','professional'],
+    'fuel':                     ['transport','transport:fuel','professional'],
 
     'ferry_terminal':           ['transport','transport:sea']
   },
@@ -114,7 +114,7 @@ var mapping = {
     'hospital':                 ['health'],
     'school':                   ['education'],
     'stadium':                  ['entertainment'],
-    'university':               ['education'],
+    'university':               ['education','education:university'],
     'public':                   ['government'],
 
     'farm':                     ['industry','industry:agriculture'],
@@ -231,6 +231,14 @@ var mapping = {
   'emergency': {
     'ambulance_station':        ['health','government']
   },
+  
+  'ferry': {
+    'yes':                      ['transport','transport:sea','transport:public']
+  },
+  
+  'highway': {
+    'bus_stop':                 ['transport:bus'],
+  },
 
   'historic': {
     'archaeological_site':      ['education'],
@@ -288,6 +296,7 @@ var mapping = {
     'light_rail':               ['transport','transport:rail'],
     'subway':                   ['transport','transport:rail'],
     'tram':                     ['transport','transport:rail'],
+    'stop':                     ['transport','transport:rail'],
     'station':                  ['transport','transport:rail','transport:station']
   },
 
